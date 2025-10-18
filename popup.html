@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>吉林大学今日通知</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+      width: 400px;
+      max-height: 600px;
+      margin: 0;
+      padding: 16px;
+      background-color: #f5f7fa;
+    }
+    h1 {
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+    .notification-item {
+      background: white;
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .notification-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    .notification-title {
+      font-size: 14px;
+      font-weight: 500;
+      color: #333;
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+    .notification-title a {
+      color: #1890ff;
+      text-decoration: none;
+    }
+    .notification-title a:hover {
+      text-decoration: underline;
+    }
+    .notification-meta {
+      font-size: 12px;
+      color: #666;
+      display: flex;
+      justify-content: space-between;
+    }
+    .empty-state {
+      text-align: center;
+      color: #999;
+      padding: 40px 0;
+    }
+    .refresh-btn {
+      display: block;
+      width: 100%;
+      padding: 8px;
+      background: #1890ff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      margin-top: 16px;
+    }
+    .refresh-btn:hover {
+      background: #40a9ff;
+    }
+    .refresh-btn:active {
+      background: #096dd9;
+    }
+  </style>
+</head>
+<body>
+  <h1>吉林大学最近24小时通知</h1>
+  <div id="notifications-container"></div>
+  <button id="refresh-btn" class="refresh-btn">刷新通知</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>

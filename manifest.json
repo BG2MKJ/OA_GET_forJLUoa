@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "吉林大学通知获取插件",
+  "version": "1.0",
+  "description": "自动获取吉林大学电子校务平台最近24小时通知",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://oa.jlu.edu.cn/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://oa.jlu.edu.cn/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "查看吉林大学今日通知"
+  },
+  "icons": {
+    "16": "icons/OA_GET_icon.png",
+    "48": "icons/OA_GET_icon.png",
+    "128": "icons/icon128.ico"
+  }
+}
